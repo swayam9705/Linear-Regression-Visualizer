@@ -1,5 +1,26 @@
-# Vue 3 + Vite
+# Linear Regression Visualizer
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+An interactive web application designed to help users understand and visualize linear regression by plotting custom data points and instantly calculating and displaying the best-fit line.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Getting Started
+
+To get the application running locally, follow these simple steps.
+
+1. Clone the Repository
+
+```bash
+git clone https://github.com/swayam9705/Linear-Regression-Visualizer.git
+
+cd linear-regression-visualizer
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the application:
+
+```bash
+npm run dev
+```
