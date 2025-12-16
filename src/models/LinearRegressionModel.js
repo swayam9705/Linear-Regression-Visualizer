@@ -1,4 +1,4 @@
-class LinearRegressionModel {
+export class LinearRegressionModel {
     constructor() {
         this.X = []
         this.Y = []

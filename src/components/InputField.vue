@@ -1,8 +1,19 @@
 <script setup>
     import { ref } from "vue"
+    import { useLRStore } from "../stores/LRStore"
+import AddedPoints from "./AddedPoints.vue"
 
     const x = ref(null)
     const y = ref(null)
+    const store = useLRStore()
+
+    const handleAddPoint = () => {
+        if (x.value !== null && y.value !== null) {
+            store.addPoint(Number(x.value), Number(y.value))
+            x.value = null
+            y.value = null
+        }
+    }
 </script>
 
 <template>
@@ -10,7 +21,8 @@
         <p class="InputField-subtitle">Points</p>
         <input type="number" placeholder="x value" v-model="x" />
         <input type="number" placeholder="y value" v-model="y" /> <br />
-        <button class="InputField-btn" v-on:click="">Add Point</button>
+        <button class="InputField-btn" v-on:click="handleAddPoint">Add Point</button>
+        <AddedPoints v-if="store.xs.length > 0" />
     </div>
 </template>
 
@@ -50,5 +62,6 @@
         color: white;
         font-size: 1rem;
         margin: 10px 0;
+        cursor: pointer;
     }
 </style>

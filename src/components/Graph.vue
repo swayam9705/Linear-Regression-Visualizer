@@ -1,15 +1,10 @@
-<script>
-    import BarChart from './BarChart.vue'
-
-    export default {
-        name: 'Graph',
-        components: { BarChart }
-    }
+<script setup>
+    import ScatterChart from './ScatterChart.vue'
 </script>
 
 <template>
     <div class="Graph">
-        <BarChart /> 
+        <ScatterChart /> 
     </div>
 </template>
 
@@ -17,5 +12,8 @@
     .Graph {
         display: grid;
         place-items: center;
+        background: whitesmoke;
+        width: 100%;
+        height: 100%;
     }
 </style>

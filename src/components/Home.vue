@@ -23,7 +23,7 @@
         grid-template-areas: "title title"
                              "points graph";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 350px;
+        grid-template-rows: 100px 400px;
         grid-gap: 20px;
     }
 

@@ -24,3 +24,23 @@ npm install
 ```bash
 npm run dev
 ```
+
+## Feature
+
+* **Interactive Data Input**: Easily add custom data points directly on the chart via input form.
+
+* **Real-time Calculation**: The Linear Regression Line is calculated and updated in real-time as data points are added or removed
+
+## Technology Stack
+
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
+* **Vue.js**:
+The core javascript framework for building user interfaces.
+
+![Pinia](https://img.shields.io/badge/Pinia-FFDA64?style=for-the-badge&logo=pinia&logoColor=black)
+* **Pinia**: The state management library for Vue.js similar to Context API in React. Provides simple and modular way to manage application data
+
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chart.js&logoColor=white)
+* **vue-chart.js**: A chart.js wrapper for Vue.js used to render the interactive scatter plot and regression line.
+
+* **Custom Linear Regression Implementation**: The mathematical framework for the app. The model is calculated from scratch using Least Squared Error and gradient descent.
