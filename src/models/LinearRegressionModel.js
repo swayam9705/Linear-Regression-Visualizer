@@ -16,7 +16,7 @@ export class LinearRegressionModel {
         this.Y.push(...ys)
     }
 
-    _squaredError() {
+    #squaredError() {
         let error = 0
         let N = this.X.length
 
@@ -27,7 +27,7 @@ export class LinearRegressionModel {
         return error
     }
 
-    _gradientStep() {
+    #gradientStep() {
         let mGradient = 0
         let bGradient = 0
 
@@ -40,8 +40,8 @@ export class LinearRegressionModel {
         return [mGradient, bGradient]
     }
 
-    _addGradientStep(L) {
-        let [mGrad, bGrad] = this._gradientStep()
+    #addGradientStep(L) {
+        let [mGrad, bGrad] = this.#gradientStep()
         this.m -= L * mGrad
         this.b -= L * bGrad
     }
@@ -59,10 +59,10 @@ export class LinearRegressionModel {
         console.log("Linear Regression Model Training ...")
         for (let i = 0; i < epochs; i++) {
             if (logSquareError) {
-                console.log(`Iteration ${i} : ${this._squaredError()}`)
+                console.log(`Iteration ${i} : ${this.#squaredError()}`)
             }
 
-            this._addGradientStep(L)
+            this.#addGradientStep(L)
         }
     }
 
